@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+</head>
+<body>
+<script>
+const params = new URLSearchParams(window.location.search);
+
+const id = params.get("id") || "default";
+const imageLink = params.get("img") || "https://example.com/image.jpg";
+const shopeeLink = params.get("shop") || "https://example.com";
+
+const key = "visited_" + id;
+const visited = localStorage.getItem(key);
+
+if (!visited) {
+localStorage.setItem(key, "1");
+window.location.href = shopeeLink;
+} else {
+window.location.href = imageLink;
+}
+</script>
+</body>
+</html><!DOCTYPE html>
+<html>
+<head>
+    <title>Redirecting...</title>
+</head>
+<body>
+    <script>
+      const params = new URLSearchParams(window.location.search);
+      const id = params.get("id");
+    
+      const shopeeLink = "https://s.shopee.tw/7AZyjE73NE";
+      const imageLink = "https://ibb.co/3mKsjCfS";
+      const key = "visited_" + id;
+      const visited = localStorage.getItem(key);
+    
+      if (!visited) {
+        localStorage.setItem(key, "1");
+        window.location.href = shopeeLink;
+      } else {
+        window.location.href = imageLink;
+      }
+    </script>
+</body>
+</html>
