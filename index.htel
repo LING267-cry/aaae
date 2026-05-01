@@ -2,10 +2,11 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>loading...</title>
 </head>
 <body>
 <script>
+alert("JS有執行"); // ⭐ 測試用
+
 const params = new URLSearchParams(window.location.search);
 
 const id = params.get("id");
